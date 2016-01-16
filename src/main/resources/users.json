@@ -1,0 +1,123 @@
+[
+  {
+    "name": "Stacey Ferguson",
+    "dob": "2001-07-17",
+    "email": "stacey.ferguson@example.com",
+    "phone": "(295)-559-3165"
+  },
+  {
+    "name": "Max George",
+    "dob": "2013-11-06",
+    "email": "max.george@example.com",
+    "phone": "(223)-219-6008"
+  },
+  {
+    "name": "Priscilla Jimenez",
+    "dob": "1972-07-23",
+    "email": "priscilla.jimenez@example.com",
+    "phone": "(945)-823-9900"
+  },
+  {
+    "name": "Noelle Griffin",
+    "gender": "female",
+    "dob": "2006-09-15",
+    "email": "noelle.griffin@example.com",
+    "phone": "(763)-807-0806"
+  },
+  {
+    "name": "Francis James",
+    "dob": "2008-05-07",
+    "email": "francis.james@example.com",
+    "phone": "(691)-909-1711"
+  },
+  {
+    "name": "Naomi Parker",
+    "dob": "1987-10-25",
+    "email": "naomi.parker@example.com",
+    "phone": "(070)-888-5882"
+  },
+  {
+    "name": "Sandra Sanders",
+    "dob": "1972-01-14",
+    "email": "sandra.sanders@example.com",
+    "phone": "(688)-692-6468"
+  },
+  {
+    "name": "Lawrence Hudson",
+    "dob": "2012-11-19",
+    "email": "lawrence.hudson@example.com",
+    "phone": "(731)-812-1689"
+  },
+  {
+    "name": "Diane Nguyen",
+    "dob": "1980-11-03",
+    "email": "diane.nguyen@example.com",
+    "phone": "(818)-553-7635"
+  },
+  {
+    "name": "Hazel Simpson",
+    "dob": "1979-01-10",
+    "email": "hazel.simpson@example.com",
+    "phone": "(219)-346-1698"
+  },
+  {
+    "name": "Arlene Jensen",
+    "dob": "1971-11-19",
+    "email": "arlene.jensen@example.com",
+    "phone": "(366)-026-4401"
+  },
+  {
+    "name": "Brittany Bowman",
+    "dob": "1977-02-27",
+    "email": "brittany.bowman@example.com",
+    "phone": "(535)-156-1207"
+  },
+  {
+    "name": "Jon Flores",
+    "dob": "2010-11-29",
+    "email": "jon.flores@example.com",
+    "phone": "(830)-161-1215"
+  },
+  {
+    "name": "Gail Mitchelle",
+    "dob": "2011-04-03",
+    "email": "gail.mitchelle@example.com",
+    "phone": "(515)-840-7358"
+  },
+  {
+    "name": "Celina Collins",
+    "dob": "1993-01-17",
+    "email": "celina.collins@example.com",
+    "phone": "(708)-789-7781"
+  },
+  {
+    "name": "Nina Pierce",
+    "dob": "1996-03-08",
+    "email": "nina.pierce@example.com",
+    "phone": "(640)-356-9078"
+  },
+  {
+    "name": "Freddie Mitchell",
+    "dob": "1974-01-25",
+    "email": "freddie.mitchell@example.com",
+    "phone": "(066)-313-0977"
+  },
+  {
+    "name": "Aubree Porter",
+    "dob": "1975-11-17",
+    "email": "aubree.porter@example.com",
+    "phone": "(484)-286-4222"
+  },
+  {
+    "name": "Daniel Chavez",
+    "dob": "1979-11-28",
+    "email": "daniel.chavez@example.com",
+    "phone": "(123)-334-8482"
+  },
+  {
+    "name": "Nicole Lopez",
+    "dob": "2003-06-13",
+    "email": "nicole.lopez@example.com",
+    "phone": "(479)-601-7706"
+  }
+]

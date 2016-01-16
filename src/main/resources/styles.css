@@ -1,0 +1,100 @@
+#main {
+    -fx-font-family: Tahoma;
+}
+
+.header, .menu {
+    -fx-background-color: #3da0e3;
+}
+
+#main, .header, .menu {
+    -fx-border-width: 3px;
+    -fx-border-color: #fff;
+}
+
+.header > *, .menu > * {
+    -fx-text-fill: #fff;
+}
+
+.header > * {
+    -fx-font-size: 120%;
+    -fx-font-weight: bold;
+}
+
+.list-menu {
+    -fx-padding: 8;
+    -fx-graphic-fixed-size: 3em;
+    -fx-background-color: #3da0e3;
+    -fx-pref-height: 9999;
+}
+
+.list-item {
+    -fx-padding: 20;
+    -fx-pref-width: 180;
+    -fx-background-color: #3da0e3;
+}
+
+.list-item * {
+    -fx-fill: #fff;
+}
+
+.list-item:active {
+    -fx-background-color: #1e88cf !important;
+}
+
+.list-item:hover {
+    -fx-background-color: #4aa7e5;
+}
+
+.content {
+    -fx-background-color: #fff;
+    -fx-border-insets: 3;
+    -fx-padding: 6;
+    -fx-border-color: #cecece;
+}
+
+.table-view {
+    -fx-font-family: Tahoma;
+}
+
+.table-view:focused {
+    -fx-focus-color: transparent;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #4aa7e5;
+}
+
+.table-row-cell:selected .text {
+    -fx-fill: #fff;
+}
+
+.name, .h1 {
+    -fx-font-weight: bold;
+}
+
+.h1 {
+    -fx-font-size: 20px;
+}
+
+.settings {
+    -fx-font-size: 15px;
+}
+
+.settings .item {
+    -fx-spacing: 20;
+    -fx-alignment: center-left;
+    -fx-padding: 30;
+    -fx-cursor: hand;
+}
+
+.settings .item.selected {
+    -fx-background-color: #e1f4ff;
+}
+
+.table-column {
+    -fx-alignment: center-left;
+}
+
+#contact-editor .text-field {
+    -fx-pref-width: 180;
+}

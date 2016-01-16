@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import tornadofx.control.ListItem?>
+<?import tornadofx.control.ListMenu?>
+<BorderPane id="main" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" prefWidth="1300" prefHeight="768">
+    <top>
+        <HBox alignment="CENTER_LEFT" prefHeight="54.0" prefWidth="600.0" spacing="20.0" styleClass="header" BorderPane.alignment="CENTER">
+            <children>
+                <Label fx:id="headerText"/>
+            </children>
+            <padding>
+                <Insets left="15.0" right="15.0"/>
+            </padding>
+        </HBox>
+    </top>
+    <left>
+        <ListMenu prefWidth="200.0" styleClass="menu" fx:id="menu">
+            <ListItem active="true" text="Contacts">
+                <graphic>
+                    <FontAwesomeIconView glyphName="USER" glyphSize="25"/>
+                </graphic>
+            </ListItem>
+            <ListItem text="Projects">
+                <graphic>
+                    <FontAwesomeIconView glyphName="SUITCASE" glyphSize="25"/>
+                </graphic>
+            </ListItem>
+            <ListItem text="Settings">
+                <graphic>
+                    <FontAwesomeIconView glyphName="COG" glyphSize="25"/>
+                </graphic>
+            </ListItem>
+        </ListMenu>
+    </left>
+</BorderPane>
