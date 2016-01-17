@@ -6,12 +6,12 @@
     -fx-background-color: #3da0e3;
 }
 
-#main, .header, .menu {
+#main, .header, .list-menu {
     -fx-border-width: 3px;
     -fx-border-color: #fff;
 }
 
-.header > *, .menu > * {
+.header > * {
     -fx-text-fill: #fff;
 }
 
@@ -37,12 +37,12 @@
     -fx-fill: #fff;
 }
 
-.list-item:active {
-    -fx-background-color: #1e88cf !important;
-}
-
 .list-item:hover {
     -fx-background-color: #4aa7e5;
+}
+
+.list-item:active {
+    -fx-background-color: #1e88cf;
 }
 
 .content {

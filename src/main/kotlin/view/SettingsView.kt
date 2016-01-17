@@ -1,10 +1,14 @@
 package view
 
+import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon
+import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView
 import javafx.animation.FadeTransition
+import javafx.scene.Node
 import javafx.scene.control.Label
 import javafx.scene.layout.BorderPane
 import javafx.scene.layout.GridPane
 import javafx.scene.layout.HBox
+import javafx.scene.paint.Color
 import javafx.util.Duration
 import tornadofx.*
 
@@ -23,7 +27,7 @@ class SettingsView : View() {
                 hbox {
                     configureItem(this)
 
-                    imageview("/img/contacts.png")
+                    this += icon(FontAwesomeIcon.USER, "#3FFF7D")
                     vbox {
                         label("Contacts").addClass("h1")
                         label("Manage Contacts; set custom settings")
@@ -35,7 +39,7 @@ class SettingsView : View() {
                 hbox {
                     configureItem(this)
 
-                    imageview("/img/projects.png")
+                    this += icon(FontAwesomeIcon.SUITCASE, "#FFB151")
                     vbox {
                         label("Projects").addClass("h1")
                         label("Manage Projects; set custom settings")
@@ -48,7 +52,7 @@ class SettingsView : View() {
                 hbox {
                     configureItem(this)
 
-                    imageview("/img/settings.png")
+                    this += icon(FontAwesomeIcon.COG, "darkblue")
                     vbox {
                         label("Settings").addClass("h1")
                         label("Manage Settings; set custom settings")
@@ -82,5 +86,10 @@ class SettingsView : View() {
         }
     }
 
-
+    private fun icon(img: FontAwesomeIcon, color: String): Node {
+        val icon = FontAwesomeIconView(img)
+        icon.glyphSize = 50.0
+        icon.glyphStyle = "-fx-fill: " + color
+        return icon
+    }
 }

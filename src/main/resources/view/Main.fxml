@@ -19,7 +19,7 @@
         </HBox>
     </top>
     <left>
-        <ListMenu prefWidth="200.0" styleClass="menu" fx:id="menu">
+        <ListMenu orientation="VERTICAL" iconPosition="LEFT" prefWidth="200.0" fx:id="menu" style="-fx-fill: aquamarine">
             <ListItem active="true" text="Contacts">
                 <graphic>
                     <FontAwesomeIconView glyphName="USER" glyphSize="25"/>
