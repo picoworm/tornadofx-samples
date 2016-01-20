@@ -3,12 +3,13 @@ package view
 import controller.ContactController
 import javafx.scene.control.TableView
 import model.User
-import tornadofx.View
-import tornadofx.addColumn
-import tornadofx.cellFormat
-import tornadofx.selectFirst
+import tornadofx.*
 import java.time.LocalDate
 
+/**
+ * A TableView of the contacts. After configuring the columns, the contacts are loaded
+ * in the background and added later on the ui thread.
+ */
 class ContactList : View() {
     override val root = TableView<User>()
     val controller: ContactController by inject()
@@ -26,6 +27,10 @@ class ContactList : View() {
         }
     }
 
+    /**
+     * Configure the columns for the table. The name column has a custom cellFormat
+     * to show the image in a circle as well as the name of the contact.
+     */
     private fun addColumns() {
         root.addColumn<User, String>("Name") { it.value.name }.apply {
             prefWidth = 200.0

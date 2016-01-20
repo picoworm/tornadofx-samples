@@ -3,6 +3,7 @@ package view
 import javafx.scene.layout.BorderPane
 import model.User
 import tornadofx.View
+import tornadofx.addClass
 import tornadofx.find
 import tornadofx.onSelectionChange
 
@@ -13,6 +14,7 @@ class ContactView : View() {
 
     init {
         title = "Contacts"
+        root.addClass("content")
 
         with (contactList.root) {
             root.center = this

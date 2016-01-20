@@ -12,11 +12,16 @@ import javafx.scene.paint.Color
 import javafx.util.Duration
 import tornadofx.*
 
+/**
+ * This view features a kind of adhoc menu component created with type safe builders.
+ * It also shows how to add nodes that are not created with builders inside the builder itself.
+ */
 class SettingsView : View() {
     override val root = BorderPane()
 
     init {
         title = "Settings"
+        root.addClass("content")
 
         root.center = GridPane().apply {
             addClass("settings")

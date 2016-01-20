@@ -2,8 +2,6 @@ package model
 
 import javafx.beans.property.SimpleObjectProperty
 import javafx.beans.property.SimpleStringProperty
-import javafx.scene.image.Image
-import samples.component.CircleImage
 import tornadofx.JsonBuilder
 import tornadofx.JsonModel
 import tornadofx.date
@@ -12,19 +10,12 @@ import java.time.LocalDate
 import javax.json.JsonObject
 
 class User : JsonModel {
-    enum class ImageSize { thumbnail, medium }
-
     val name = SimpleStringProperty()
     val dob = SimpleObjectProperty<LocalDate>()
     val email = SimpleStringProperty()
     val phone = SimpleObjectProperty<String>()
 
-    fun thumbnail() = CircleImage(Image(imageURL(ImageSize.thumbnail)), 40.0)
-    fun image() = CircleImage(Image(imageURL(ImageSize.medium)), 150.0)
-
-    private fun imageURL(size: User.ImageSize) =
-            User::class.java.getResource("/img/users/$size-${name.value.hashCode()}.jpg").toString()
-
+    // Convert properties of a javax.json.JsonObject to properties of our domain object
     override fun updateModel(json: JsonObject) {
         name.value = json.string("name")
         dob.value = json.date("dob")
@@ -32,6 +23,7 @@ class User : JsonModel {
         phone.value = json.string("phone")
     }
 
+    // Convert our domain object to JSON, typically used for POST and PUT operations by the Rest API
     override fun toJSON(json: JsonBuilder) {
         with (json) {
             add("name", name)

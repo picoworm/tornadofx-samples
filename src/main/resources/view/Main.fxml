@@ -19,7 +19,8 @@
         </HBox>
     </top>
     <left>
-        <ListMenu orientation="VERTICAL" iconPosition="LEFT" prefWidth="200.0" fx:id="menu" style="-fx-fill: aquamarine">
+        <!-- ListMenu is a custom component from the TornadoFX Controls project. These controls can be used with vanilla JavaFX as well -->
+        <ListMenu orientation="VERTICAL" iconPosition="LEFT" prefWidth="200.0" fx:id="menu">
             <ListItem active="true" text="Contacts">
                 <graphic>
                     <FontAwesomeIconView glyphName="USER" glyphSize="25"/>

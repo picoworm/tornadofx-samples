@@ -5,15 +5,22 @@ import javafx.scene.chart.CategoryAxis
 import javafx.scene.chart.NumberAxis
 import javafx.scene.chart.XYChart
 import tornadofx.View
+import tornadofx.addClass
 import java.util.*
 
+/**
+ * A Simple BarChart View with some random data. Nothing really framework spesific here.
+ */
 class ProjectChart: View() {
     override val root = BarChart(CategoryAxis(), NumberAxis())
 
     init {
-        root.xAxis.label = "Month"
-        root.yAxis.label = "Amount"
-        root.isLegendVisible = false
+
+        with(root) {
+            xAxis.label = "Month"
+            yAxis.label = "Amount"
+            isLegendVisible = false
+        }
 
         val serie = XYChart.Series<String, Number>();
 
