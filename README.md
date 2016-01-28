@@ -1,6 +1,6 @@
-# Tornado FX Samples
+# TornadoFX Samples
 
-Here you will find samples showcasing best practises with Tornado FX. For now it contains a fictive CRM application,
+Here you will find samples showcasing best practises with [TornadoFX](https://github.com/edvin/tornadofx). For now it contains a fictive CRM application,
 inspired by the CRM example app from the [DHTMLX](http://dhtmlx.com/) framework.
 
 ![CRM Demo App](/screenshots/crm.png?raw=true "CRM Demo App")
