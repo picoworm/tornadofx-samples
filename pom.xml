@@ -98,7 +98,7 @@
                 <configuration>
                     <mainClass>fxlauncher.CreateManifest</mainClass>
                     <arguments>
-                        <argument>https://raw.githubusercontent.com/edvin/tornadofx-samples/master/app</argument>
+                        <argument>https://raw.githubusercontent.com/edvin/tornadofx-samples/master/app/</argument>
                         <argument>CRMApplication</argument>
                         <argument>${project.build.directory}/jfx/app</argument>
                         <argument>${project.description}</argument>
