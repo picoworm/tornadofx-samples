@@ -75,7 +75,7 @@
                         </goals>
                     </execution>
                     <execution>
-                        <id>create-web</id>
+                        <id>create-native</id>
                         <phase>install</phase>
                         <goals>
                             <goal>build-native</goal>
