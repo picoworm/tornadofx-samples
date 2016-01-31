@@ -12,7 +12,7 @@ and a prebuilt version of this demo is provided is this repo. You can run it lik
 
 ```bash
 wget https://raw.githubusercontent.com/edvin/tornadofx-samples/master/app/lib/fxlauncher-1.0.1.jar
-java -jar fxlauncher-1.0.1.jar https://raw.githubusercontent.com/edvin/tornadofx-samples/master/app 
+java -jar fxlauncher-1.0.1.jar https://raw.githubusercontent.com/edvin/tornadofx-samples/master/app/app.xml 
 ```
 
 You can also create a native installer with auto update capabilities by running:
