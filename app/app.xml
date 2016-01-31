@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Application uri="https://raw.githubusercontent.com/edvin/tornadofx-samples/master/app" launch="CRMApplication">
+    <lib file="lib/commons-codec-1.9.jar" checksum="1436355590" size="263965"/>
+    <lib file="lib/commons-logging-1.2.jar" checksum="3829945133" size="61829"/>
+    <lib file="lib/controlsfx-8.40.10.jar" checksum="1589854040" size="954085"/>
+    <lib file="lib/fontawesomefx-8.8.jar" checksum="1312551578" size="443326"/>
+    <lib file="lib/fx-1.2.jar" checksum="557842018" size="81393"/>
+    <lib file="lib/fxlauncher-1.0.1.jar" checksum="110651878" size="13967"/>
+    <lib file="lib/httpclient-4.5.1.jar" checksum="28576117" size="732765"/>
+    <lib file="lib/httpcore-4.4.3.jar" checksum="714542831" size="326594"/>
+    <lib file="lib/javax.json-1.0.4.jar" checksum="3454783366" size="85147"/>
+    <lib file="lib/kotlin-runtime-1.0.0-beta-4584.jar" checksum="179906952" size="239293"/>
+    <lib file="lib/kotlin-stdlib-1.0.0-beta-4584.jar" checksum="1627019032" size="741707"/>
+    <lib file="lib/tornadofx-controls-1.0.jar" checksum="1558032670" size="15765"/>
+    <lib file="tornadofx-samples-1.2-jfx.jar" checksum="898499780" size="361497"/>
+    <updateText>Updating...</updateText>
+    <updateLabelStyle>-fx-font-weight: bold;</updateLabelStyle>
+    <progressBarStyle>-fx-pref-width: 200;</progressBarStyle>
+    <wrapperStyle>-fx-spacing: 10; -fx-padding: 25;</wrapperStyle>
+</Application>

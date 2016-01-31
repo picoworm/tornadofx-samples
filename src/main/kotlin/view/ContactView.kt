@@ -7,6 +7,12 @@ import tornadofx.addClass
 import tornadofx.find
 import tornadofx.onSelectionChange
 
+/**
+ * A Master/Detail example with TableView injected in the center and
+ * a ContactEditor fragment loaded in the right part of the BorderPane
+ * when a Contact is selected.
+ *
+ */
 class ContactView : View() {
     override val root = BorderPane()
 
@@ -20,14 +26,14 @@ class ContactView : View() {
             root.center = this
 
             onSelectionChange {
-                selectionChanged(it)
+                editUser(it)
             }
         }
 
-        selectionChanged(null)
+        editUser(null)
     }
 
-    private fun selectionChanged(selectedUser: User?) {
+    private fun editUser(selectedUser: User?) {
         val detail = find(ContactEditor::class)
         if (selectedUser != null)
             detail.edit(selectedUser)
