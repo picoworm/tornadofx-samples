@@ -18,6 +18,6 @@ class ContactController : Controller() {
 
     init {
         // Configure the BASE URI of the Rest endpoint. The example just points to a static collection of files
-        api.baseURI = "https://raw.githubusercontent.com/edvin/tornadofx-samples/master/src/main/resources"
+        api.baseURI = "http://fxsamples.tornado.no/api"
     }
 }
