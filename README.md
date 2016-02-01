@@ -16,6 +16,12 @@ wget http://fxsamples.tornado.no/lib/fxlauncher-1.0.1.jar
 java -jar fxlauncher-1.0.1.jar http://fxsamples.tornado.no/app.xml
 ```
 
+### Download prebuilt binaries
+
+- [MacOSX](http://fxsamples.tornado.no/FXSamples-1.0.dmg)
+- [Windows](http://fxsamples.tornado.no/FXSamples-1.0.exe)
+- [Linux](http://fxsamples.tornado.no/fxsamples-1.0.deb)
+
 The example contains contact data and images from https://randomuser.me. The generated JSON was then stripped for
 unneeded fields, but no data was changed. The example data is copyrighted under the
 [Creative Commons BY-NC-SA 4.0](http://creativecommons.org/licenses/by-nc-sa/4.0/) license.
