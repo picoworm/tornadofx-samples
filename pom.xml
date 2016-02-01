@@ -6,14 +6,14 @@
 
     <groupId>no.tornado</groupId>
     <artifactId>tornadofx-samples</artifactId>
-    <version>1.2</version>
+    <version>1.2.1</version>
     <packaging>jar</packaging>
 
     <dependencies>
         <dependency>
             <groupId>no.tornado</groupId>
             <artifactId>fx</artifactId>
-            <version>1.2</version>
+            <version>1.2.1</version>
         </dependency>
         <dependency>
             <groupId>no.tornado</groupId>
@@ -74,13 +74,6 @@
                             <goal>build-jar</goal>
                         </goals>
                     </execution>
-                    <execution>
-                        <id>create-native</id>
-                        <phase>install</phase>
-                        <goals>
-                            <goal>build-native</goal>
-                        </goals>
-                    </execution>
                 </executions>
             </plugin>
             <plugin>
@@ -98,7 +91,7 @@
                 <configuration>
                     <mainClass>fxlauncher.CreateManifest</mainClass>
                     <arguments>
-                        <argument>https://raw.githubusercontent.com/edvin/tornadofx-samples/master/app/</argument>
+                        <argument>http://fxsamples.tornado.no/app.xml</argument>
                         <argument>CRMApplication</argument>
                         <argument>${project.build.directory}/jfx/app</argument>
                         <argument>${project.description}</argument>
