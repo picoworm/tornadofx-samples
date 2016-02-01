@@ -8,20 +8,13 @@ inspired by the CRM example app from the [DHTMLX](http://dhtmlx.com/) framework.
 The example also integrates controls from the [TornadoFX Controls](https://github.com/edvin/tornadofx-controls) project.
 
 The deployment descriptor (`pom.xml`) also showcases usage of the [FXLauncher Autoupdating App Launcher](https://github.com/edvin/fxlauncher)
-and a prebuilt version of this demo is provided is this repo. You can run it like this:
+and a prebuilt version of this demo is provided is this repo. You can run it by downloading the launcher (14kKb) and
+pointing it to the `app.xml` app manifest:
 
 ```bash
 wget https://raw.githubusercontent.com/edvin/tornadofx-samples/master/app/lib/fxlauncher-1.0.1.jar
 java -jar fxlauncher-1.0.1.jar https://raw.githubusercontent.com/edvin/tornadofx-samples/master/app/app.xml
 ```
-
-You can also create a native installer with auto update capabilities by running:
-
-```
-mvn clean install
-```
-
-Your `target/jfx/native` folder will contain a binary installer for an application that autoupdates on each startup.
 
 The example contains contact data and images from https://randomuser.me. The generated JSON was then stripped for
 unneeded fields, but no data was changed. The example data is copyrighted under the
