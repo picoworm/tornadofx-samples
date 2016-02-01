@@ -12,8 +12,8 @@ and a prebuilt version of this demo is provided is this repo. You can run it by 
 pointing it to the `app.xml` app manifest:
 
 ```bash
-wget http://fxsamples.tornado.no/app/lib/fxlauncher-1.0.1.jar
-java -jar fxlauncher-1.0.1.jar http://fxsamples.tornado.no/app/app.xml
+wget http://fxsamples.tornado.no/lib/fxlauncher-1.0.1.jar
+java -jar fxlauncher-1.0.1.jar http://fxsamples.tornado.no/app.xml
 ```
 
 The example contains contact data and images from https://randomuser.me. The generated JSON was then stripped for
