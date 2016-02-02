@@ -18,9 +18,9 @@ java -jar fxlauncher.jar
 
 ### Download prebuilt binaries
 
-- [MacOSX](http://fxsamples.tornado.no/FXSamples-1.0.dmg)
-- [Windows](http://fxsamples.tornado.no/FXSamples-1.0.exe)
-- [Linux](http://fxsamples.tornado.no/fxsamples-1.0.deb)
+- [MacOSX](http://fxsamples.tornado.no/CRMApplication-1.0.dmg)
+- [Windows](http://fxsamples.tornado.no/CRMApplication-1.0.exe)
+- [Linux](http://fxsamples.tornado.no/crmapplication-1.0.deb)
 
 The example contains contact data and images from https://randomuser.me. The generated JSON was then stripped for
 unneeded fields, but no data was changed. The example data is copyrighted under the
