@@ -7,20 +7,20 @@ inspired by the CRM example app from the [DHTMLX](http://dhtmlx.com/) framework.
 
 The example also integrates controls from the [TornadoFX Controls](https://github.com/edvin/tornadofx-controls) project.
 
-The deployment descriptor (`pom.xml`) also showcases usage of the [FXLauncher Autoupdating App Launcher](https://github.com/edvin/fxlauncher)
-and a prebuilt version of this demo is provided is this repo. You can run it by downloading the launcher (14kKb) and
-pointing it to the `app.xml` app manifest:
+The deployment descriptor (`pom.xml`)  showcases usage of the [FXLauncher Autoupdating App Launcher](https://github.com/edvin/fxlauncher)
+and a prebuilt version of this demo is provided is this repo. You can run it by [downloading](http://fxsamples.tornado.no/fxlauncher.jar) 
+and running the launcher (14kKb), or from the command line:
 
 ```bash
-wget http://fxsamples.tornado.no/lib/fxlauncher-1.0.1.jar
-java -jar fxlauncher-1.0.1.jar http://fxsamples.tornado.no/app.xml
+wget http://fxsamples.tornado.no/fxlauncher.jar
+java -jar fxlauncher.jar
 ```
 
 ### Download prebuilt binaries
 
-- [MacOSX](http://fxsamples.tornado.no/FXSamples-1.0.dmg)
-- [Windows](http://fxsamples.tornado.no/FXSamples-1.0.exe)
-- [Linux](http://fxsamples.tornado.no/fxsamples-1.0.deb)
+- [MacOSX](http://fxsamples.tornado.no/CRMApplication-1.0.dmg)
+- [Windows](http://fxsamples.tornado.no/CRMApplication-1.0.exe)
+- [Linux](http://fxsamples.tornado.no/crmapplication-1.0.deb)
 
 The example contains contact data and images from https://randomuser.me. The generated JSON was then stripped for
 unneeded fields, but no data was changed. The example data is copyrighted under the

@@ -6,14 +6,30 @@
 
     <groupId>no.tornado</groupId>
     <artifactId>tornadofx-samples</artifactId>
-    <version>1.2.2</version>
+    <version>1.2.1</version>
     <packaging>jar</packaging>
+    <name>CRMApplication</name>
+
+    <!-- This application is deployed with https://github.com/edvin/fxlauncher -->
+
+    <properties>
+        <kotlin.version>1.0.0-beta-4584</kotlin.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <app.filename>CRMApplication</app.filename>
+        <app.mainClass>CRMApplication</app.mainClass>
+        <app.vendor>SYSE</app.vendor>
+        <app.version>1.0</app.version>
+        <app.url>http://fxsamples.tornado.no/</app.url>
+        <app.deploy.target>w48839@fxsamples.tornado.no:fxsamples</app.deploy.target>
+        <app.dir>${project.build.directory}/app</app.dir>
+        <app.installerdir>${project.build.directory}/installer</app.installerdir>
+    </properties>
 
     <dependencies>
         <dependency>
             <groupId>no.tornado</groupId>
             <artifactId>fx</artifactId>
-            <version>1.2.2</version>
+            <version>1.2.1</version>
         </dependency>
         <dependency>
             <groupId>no.tornado</groupId>
@@ -33,7 +49,7 @@
         <dependency>
             <groupId>no.tornado</groupId>
             <artifactId>fxlauncher</artifactId>
-            <version>1.0.1</version>
+            <version>1.0.5</version>
         </dependency>
     </dependencies>
 
@@ -55,23 +71,30 @@
                     </execution>
                 </executions>
             </plugin>
+            <!-- Compile project jar to appdir -->
             <plugin>
-                <groupId>com.zenjava</groupId>
-                <artifactId>javafx-maven-plugin</artifactId>
-                <version>8.1.5</version>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>2.6</version>
                 <configuration>
-                    <mainClass>fxlauncher.Launcher</mainClass>
-                    <appName>CRMApplication</appName>
-                    <vendor>SYSE</vendor>
-                    <needShortcut>true</needShortcut>
-                    <needMenu>true</needMenu>
+                    <outputDirectory>${app.dir}</outputDirectory>
+                </configuration>
+            </plugin>
+            <!-- Copy dependencies to appdir -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>2.10</version>
+                <configuration>
+                    <excludeScope>provided</excludeScope>
+                    <outputDirectory>${app.dir}</outputDirectory>
+                    <stripVersion>true</stripVersion>
                 </configuration>
                 <executions>
                     <execution>
-                        <id>create-jfxjar</id>
                         <phase>package</phase>
                         <goals>
-                            <goal>build-jar</goal>
+                            <goal>copy-dependencies</goal>
                         </goals>
                     </execution>
                 </executions>
@@ -80,30 +103,93 @@
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>1.4.0</version>
+                <!-- Generate app.xml manifest -->
                 <executions>
                     <execution>
+                        <id>create-manifest</id>
                         <phase>package</phase>
                         <goals>
                             <goal>java</goal>
                         </goals>
+                        <configuration>
+                            <mainClass>fxlauncher.CreateManifest</mainClass>
+                            <arguments>
+                                <argument>${app.url}</argument>
+                                <argument>${app.mainClass}</argument>
+                                <argument>${app.dir}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <!-- Embed app.xml inside fxlauncher.xml so we don't need to reference app.xml to start the app -->
+                    <execution>
+                        <id>embed-manifest-in-launcher</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                        <configuration>
+                            <executable>jar</executable>
+                            <workingDirectory>${app.dir}</workingDirectory>
+                            <arguments>
+                                <argument>uf</argument>
+                                <argument>fxlauncher.jar</argument>
+                                <argument>app.xml</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <!-- Create native installer. Feel free to add more arguments as needed.
+                     https://docs.oracle.com/javase/8/docs/technotes/tools/windows/javapackager.html
+                     -->
+                    <execution>
+                        <id>installer</id>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                        <configuration>
+                            <executable>javapackager</executable>
+
+                            <arguments>
+                                <argument>-deploy</argument>
+                                <argument>-native</argument>
+                                <argument>-outdir</argument>
+                                <argument>${app.installerdir}</argument>
+                                <argument>-outfile</argument>
+                                <argument>${app.filename}</argument>
+                                <argument>-srcdir</argument>
+                                <argument>${app.dir}</argument>
+                                <argument>-srcfiles</argument>
+                                <argument>fxlauncher.jar</argument>
+                                <argument>-appclass</argument>
+                                <argument>fxlauncher.Launcher</argument>
+                                <argument>-name</argument>
+                                <argument>${project.name}</argument>
+                                <argument>-title</argument>
+                                <argument>${project.name}</argument>
+                                <argument>-vendor</argument>
+                                <argument>${app.vendor}</argument>
+                                <argument>-BappVersion=${app.version}</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                    <!-- Copy application artifacts to remote site using scp (optional) -->
+                    <execution>
+                        <id>deploy-app</id>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                        <configuration>
+                            <executable>scp</executable>
+                            <arguments>
+                                <argument>-r</argument>
+                                <argument>${app.dir}/.</argument>
+                                <argument>${app.deploy.target}</argument>
+                            </arguments>
+                        </configuration>
                     </execution>
                 </executions>
-                <configuration>
-                    <mainClass>fxlauncher.CreateManifest</mainClass>
-                    <arguments>
-                        <argument>http://fxsamples.tornado.no/app.xml</argument>
-                        <argument>CRMApplication</argument>
-                        <argument>${project.build.directory}/jfx/app</argument>
-                        <argument>${project.description}</argument>
-                    </arguments>
-                </configuration>
             </plugin>
         </plugins>
-    </build>
 
-    <properties>
-        <kotlin.version>1.0.0-rc-1036</kotlin.version>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
+    </build>
 
 </project>
