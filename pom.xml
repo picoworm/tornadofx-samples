@@ -6,14 +6,14 @@
 
     <groupId>no.tornado</groupId>
     <artifactId>tornadofx-samples</artifactId>
-    <version>1.2.1</version>
+    <version>1.2.2</version>
     <packaging>jar</packaging>
     <name>CRMApplication</name>
 
     <!-- This application is deployed with https://github.com/edvin/fxlauncher -->
 
     <properties>
-        <kotlin.version>1.0.0-beta-4584</kotlin.version>
+        <kotlin.version>1.0.0-rc-1036</kotlin.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <app.filename>CRMApplication</app.filename>
         <app.mainClass>CRMApplication</app.mainClass>
@@ -29,7 +29,7 @@
         <dependency>
             <groupId>no.tornado</groupId>
             <artifactId>fx</artifactId>
-            <version>1.2.1</version>
+            <version>1.2.2</version>
         </dependency>
         <dependency>
             <groupId>no.tornado</groupId>
